@@ -1,0 +1,37 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/nav.css' %}">
+
+<nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark">
+    <a href="/job" class="navbar-brand align-text-bottom"><i class="bi bi-briefcase-fill mr-2"  ></i>JOBIN</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topNav" aria-controls="topNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="dropdown-toggle navbar-collapse justify-content-end" id="topNav">
+        <ul class="navbar-nav mr-auto">
+            <!-- <li class="nav-item">
+                <form class="d-flex">
+                    <input class="form-control" type="text" placeholder="Search Jobs">
+                    <button class="btn btn-info btn-sm" type="submit">Go</button>
+                </form>
+            </li> -->
+            <li class="nav-item">
+                <a class="nav-link" href="/job">
+                    <span data-feather="home"></span>
+                    Home
+                    <span class="sr-only">(current)</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/job/profile/{{user.id}}">
+                    <span data-feather="user"></span>
+                    Profile
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/logout">
+                    <span data-feather="log-out"></span>
+                    Log Out</a>
+            </li>
+        </ul>
+    </div>
+</nav>
